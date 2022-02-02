@@ -8,7 +8,3 @@ alert ("En 2032 vas a haber hecho aproximadamente" + cantidadCompras2032 + "comp
 
 //en lugar de alert se puede usar Console.log
 //parseInt usa el numero entero ParseFloat usa el numero en su totalidad
-<<<<<<< HEAD
-
-=======
->>>>>>> rama-javascript
