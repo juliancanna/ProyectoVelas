@@ -45,4 +45,11 @@ do { cantidadVelas = prompt("Cuantas velas desea comprar?");
 
 alert (`El valor total es  ${valor * cantidadVelas}`)
    
+let num2
+let num1
+num1 = parseInt(prompt("Ingrese valor total"))
+num2 = parseInt(prompt("En cuantas cuotas quiere abonar?"))
+const division = (num1, num2) => num1 / num2
+console.log(division(num1,num2))
 
+alert(`El valor de cada cuota es de ${num1 / num2}`)
