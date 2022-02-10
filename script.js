@@ -54,3 +54,123 @@ const division = (num1, num2) => num1 / num2
 console.log(division(num1, num2))
 
 alert(`El valor de cada cuota es de ${num1 / num2}`)
+
+/* const persona1 = {
+    dni: "11.111.111",
+    nombre: "Julian",
+    apellido: "Graells",
+    edad: 23,
+    esEstudiante: true,
+} */
+
+/* console.log(persona1)
+console.log(persona1.nombre)
+
+persona1.nombre = "Pepe" /*cambia el nombre*/
+
+/* const persona2 = {
+    dni: "10.000.000",
+    nombre: "Teo",
+    apellido: "Canna",
+    edad: 17,
+    esEstudiante: true,
+    domicilio: "calle falsa 123"
+} */
+
+function Persona(dni, nombre, apellido, edad, esEstudiante) {
+    this.dni = dni;
+    this.nombre = nombre;
+    this.apellido = apellido;
+    this.edad = edad;
+    this.esEstudiante = esEstudiante;
+}
+
+const persona1 = new Persona(12345678, "Juanfer", "Quintero", 27, false)
+const persona2 = new Persona(32165498, "Fulano", "Detal", 27, false)
+
+
+persona1 = persona2
+/*esto lo permite porque es let o var (si son const no)*/
+console.log(persona1)
+
+
+
+// ESTA CLASE ES DE ARRAYS
+
+
+// EL PRIMER ELEMENTO SUELE SER EL INDICE 0
+// un array suele ser un elemento no fijo
+/* let array = [] */
+//0       1   2      3   
+/* let array2 = ["Hola", 5, true, "Chau", false]
+console.log(array2)
+console.log(array2[2])
+
+for(let i = 0; i < array2.length; i++){
+    console.log(array2[i]) //array[0] toma tambien hasta el 3
+}
+
+array2.push({nombre: "Leonel", apellido: "Messi"})
+array2.unshift({nombre: "Leonel", apellido: "Messi"}) //el unshift agrega elementos al principio del array
+
+console.log(array2)
+
+/* array2.shift() */ //eliminta el primer elemento del array
+
+/* console.log(array2) */
+
+/* array2.pop() */ //elimina el utimo elemento del array
+//lo recomendable es eliminar elementos mediante pop
+
+/* array2.splice(2, 3) */ //se eliminan elementos mediante indices, elimina 1 o varios elementos. el primer numero es el indice del que parte y el otro es la cantidad de elementos
+
+/* console.log(array2.join(",")) */ //te pasa los elementos a string y pide un separador
+
+/* let array1 = ["Pez", "Perro"]
+let array2 = ["Gato", "Conejo"]
+
+let array3 = array1.concat(array2)
+
+console.log(array3)
+
+let array4 = array3.slice(1, 3) //MI INICIO SE INCLUYE, NO EL FIN, POR ESO NO INCLUYE CONEJO
+console.log(array4) */
+
+let array1 = ["Pedro", "Agustina", "Maria", "Walter", "Raul"]
+
+let indice = array1.indexOf("Agustina")
+
+let nombreABuscar = prompt("Ingrese un  nombre")
+console.log(indice)
+
+if (indice !== -1) {
+    array1.splice(indice, 1)
+} else {
+    alert("Usuario no encontrado")
+}
+
+console.log(array1)
+
+console.log(array1.includes("Pedro")) //Includes me dice si un elemento esta o no en el array
+
+console.log(array1.reverse()) //Reverse da vuelta un array
+
+//Reverse es un metodo destructivo, modifica el array original
+
+class Persona{
+    constructor(nombre, apellido, edad) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.edad = edad;
+    }
+}
+
+const persona1 = new Persona ("Francisco", "Pugh", 13)
+const persona2 = new Persona ("Gonzalo", "Isa", 20)
+const persona3 = new Persona ("Mario", "Massonant", 21)
+
+let arrayPersonas = [persona1, persona2, persona3]
+
+for(let i= 0; i < arrayPersonas.length; i++){
+    
+}
