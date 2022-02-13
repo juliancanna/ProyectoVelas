@@ -10,7 +10,7 @@ alert ("En 2032 vas a haber hecho aproximadamente" + cantidadCompras2032 + "comp
 //parseInt usa el numero entero ParseFloat usa el numero en su totalidad
 */
 
-for (let i = 0; i < 6; i++) {
+/* for (let i = 0; i < 6; i++) {
     console.log(i)
 }
 
@@ -22,7 +22,7 @@ for (let i = 0; i < 10; i++) { // 0 1 2 3 4 5 6 7 8 9
 }
 
 console.log(`El promedio de las notas es ${acumulador / 10}`)
-
+ */
 
 
 /* let cantidadVelas =parseInt (prompt("Cuantas velas desea comprar?"))
@@ -31,7 +31,7 @@ console.log (cantidadVelas)
 let precioVela = 50 
 console.log (cantidadVelas * precioVela) */
 
-let cantidadVelas
+/* let cantidadVelas
 let valor = 300
 do {
     cantidadVelas = prompt("Cuantas velas desea comprar?");
@@ -54,7 +54,7 @@ const division = (num1, num2) => num1 / num2
 console.log(division(num1, num2))
 
 alert(`El valor de cada cuota es de ${num1 / num2}`)
-
+ */
 /* const persona1 = {
     dni: "11.111.111",
     nombre: "Julian",
@@ -77,7 +77,7 @@ persona1.nombre = "Pepe" /*cambia el nombre*/
     domicilio: "calle falsa 123"
 } */
 
-function Persona(dni, nombre, apellido, edad, esEstudiante) {
+/* function Persona(dni, nombre, apellido, edad, esEstudiante) {
     this.dni = dni;
     this.nombre = nombre;
     this.apellido = apellido;
@@ -90,9 +90,10 @@ const persona2 = new Persona(32165498, "Fulano", "Detal", 27, false)
 
 
 persona1 = persona2
+ */
 /*esto lo permite porque es let o var (si son const no)*/
-console.log(persona1)
-
+/* console.log(persona1)
+ */
 
 
 // ESTA CLASE ES DE ARRAYS
@@ -136,11 +137,11 @@ console.log(array3)
 let array4 = array3.slice(1, 3) //MI INICIO SE INCLUYE, NO EL FIN, POR ESO NO INCLUYE CONEJO
 console.log(array4) */
 
-let array1 = ["Pedro", "Agustina", "Maria", "Walter", "Raul"]
+/* let array1 = ["Pedro", "Agustina", "Maria", "Walter", "Raul"]
 
 let indice = array1.indexOf("Agustina")
 
-let nombreABuscar = prompt("Ingrese un  nombre")
+let nombreABuscar = prompt("Ingrese un nombre")
 console.log(indice)
 
 if (indice !== -1) {
@@ -153,11 +154,11 @@ console.log(array1)
 
 console.log(array1.includes("Pedro")) //Includes me dice si un elemento esta o no en el array
 
-console.log(array1.reverse()) //Reverse da vuelta un array
+console.log(array1.reverse()) */ //Reverse da vuelta un array
 
 //Reverse es un metodo destructivo, modifica el array original
 
-class Persona{
+/* class Persona{
     constructor(nombre, apellido, edad) {
         this.nombre = nombre;
         this.apellido = apellido;
@@ -173,4 +174,23 @@ let arrayPersonas = [persona1, persona2, persona3]
 
 for(let i= 0; i < arrayPersonas.length; i++){
     
-}
+} */
+
+
+let array1 = ["velas", "fragancias", "sahumerios", "recipientes"]
+let nombreABuscar = prompt("Ingrese un producto")
+let indice = array1.indexOf(nombreABuscar)
+
+/* console.log(indice) */
+
+if (indice !== -1) {
+    alert("Tenemos ese producto para ofrecerte")
+} else {
+    alert("No contamos con ese producto")
+} 
+
+/* do {
+    nombreABuscar = prompt("Ingrese un producto")
+} while (nombreABuscar == ""); */
+
+console.log(array1) 
