@@ -1,4 +1,4 @@
-/* const SALUDO = "Hola Navegadores!"
+const SALUDO = "Hola Navegadores!"
 alert (SALUDO)
 let nombreNavegador = prompt ("¿Cuál es tu nombre?")
 alert ("Bienvenido/a" + nombreNavegador)
@@ -8,9 +8,9 @@ alert ("En 2032 vas a haber hecho aproximadamente" + cantidadCompras2032 + "comp
 
 //en lugar de alert se puede usar Console.log
 //parseInt usa el numero entero ParseFloat usa el numero en su totalidad
-*/
 
-/* for (let i = 0; i < 6; i++) {
+
+for (let i = 0; i < 6; i++) {
     console.log(i)
 }
 
@@ -22,8 +22,6 @@ for (let i = 0; i < 10; i++) { // 0 1 2 3 4 5 6 7 8 9
 }
 
 console.log(`El promedio de las notas es ${acumulador / 10}`)
- */
-
 
 /* let cantidadVelas =parseInt (prompt("Cuantas velas desea comprar?"))
 console.log (cantidadVelas)
@@ -31,7 +29,7 @@ console.log (cantidadVelas)
 let precioVela = 50 
 console.log (cantidadVelas * precioVela) */
 
-/* let cantidadVelas
+let cantidadVelas
 let valor = 300
 do {
     cantidadVelas = prompt("Cuantas velas desea comprar?");
@@ -54,7 +52,7 @@ const division = (num1, num2) => num1 / num2
 console.log(division(num1, num2))
 
 alert(`El valor de cada cuota es de ${num1 / num2}`)
- */
+
 /* const persona1 = {
     dni: "11.111.111",
     nombre: "Julian",
@@ -194,3 +192,94 @@ if (indice !== -1) {
 } while (nombreABuscar == ""); */
 
 console.log(array1) 
+
+//FUNCIONES DE ORDEN SUPERIOR CLASE 7
+
+/* const persona1 = {
+    nombre: "Julian",
+    apellido: "Graells",
+    sueldo: 4000
+}
+
+const persona2 = {
+    nombre: "German",
+    apellido: "Garmendia",
+    sueldo: 5000
+}
+
+const persona3 = {
+    nombre: "Aylen",
+    apellido: "Fernandez",
+    sueldo: 6000
+}
+
+const array2 = [persona1, persona2, persona3] */
+
+/* for(let persona of array2) {
+    /* for(let propiedad in persona) {
+    console.log(persona[propiedad])
+    } */
+//}
+
+/* array2.forEach(persona => console.log(persona)) // RECORRER UN ARRAY
+
+console.log(array2.find((persona) => persona.nombre == "German" && persona.sueldo >= 6000)) //find lo que hace es decirme si encuentra un objeto o no
+console.log(array2.filter((persona) => persona.nombre == "Julian" && persona.sueldo >= 6000)) //filter me retorna todos los objetos que cumplen la condicion y si no existe me devuelve un array vacio
+
+console.log(array2.map((persona) => persona.sueldo >= 6000)) 
+ const array3 = array2
+console.log(array3.sort((persona1, persona2) => {
+    if (persona1.nombre < persona2.nombre) {
+        return -1
+    }
+    if(nombre1 > nombre2) {
+        return 1
+    }
+
+    return 0
+})) //el metodo sort es una forma de ordenar un array segun un criterio
+
+console.log(array3.sort((persona1,persona2) => persona1.sueldo - persona2.sueldo))
+
+console.log(Math.cbrt(2)) */
+
+
+const producto1 = {
+    nombre: "velas",
+    precio: 1500
+}
+
+const producto2 = {
+    nombre: "fragancias",
+    precio: 2000
+}
+
+const producto3 = {
+    nombre: "sahumerios",
+    precio: 500
+}
+
+const producto4 = {
+    nombre: "recipientes",
+    precio: 2500
+}
+
+const array2 = [producto1, producto2, producto3, producto4]
+
+array2.forEach(producto => console.log(producto)) // RECORRER UN ARRAY
+
+console.log(array2.find((producto) => producto.nombre == "fragancias" && producto.precio >= 2500)) //find lo que hace es decirme si encuentra un objeto o no
+console.log(array2.filter((producto) => producto.nombre == "velas" && producto.precio >= 2500)) //filter me retorna todos los objetos que cumplen la condicion y si no existe me devuelve un array vacio
+
+console.log(array2.map((producto) => producto.precio >= 2500)) 
+ const array3 = [...array2]
+console.log(array2.sort(function(a, b) {
+    return a.nombre.localeCompare(b.nombre);
+})) //el metodo sort es una forma de ordenar un array segun un criterio
+
+console.log(array3.sort(function(a, b) {
+    return a.precio - b.precio;    
+}))
+
+//CLASE 8 (DOM)
+
