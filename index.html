@@ -15,13 +15,13 @@
 <body>
     <header>
         <nav>
-            <a href="#">Inicio</a>
-            <a href="#">Acerca de</a>
-            <a href="#">Portafolio</a>
-            <a href="#">Contacto</a>
-            <a href="#">Clientes</a>
+            <a href="#inicio">Inicio</a>
+            <a href="#acerca-de">Acerca de</a>
+            <a href="#portfolio">Portafolio</a>
+            <a href="#contacto">Contacto</a>
+            <a href="#clientes">Clientes</a>
         </nav>
-        <section class="textos-header">
+        <section class="textos-header" id="inicio">
             <h1>El aroma que buscabas</h1>
             <h2>Con el amor de siempre</h2>
         </section>
@@ -32,7 +32,7 @@
             </svg></div>
     </header>
     <main>
-        <section class="contenedor sobre-nosotros">
+        <section class="contenedor sobre-nosotros" id="acerca-de">
             <h2 class="titulo">Nuestro producto</h2>
             <div class="contenedor-sobre-nosotros">
                 <img class="imagen-about-us" src="img/ilustracionsobrenosotros.svg" alt="">
@@ -49,7 +49,7 @@
                 </div>
             </div>
         </section>
-        <section class="Portafolio">
+        <section class="Portafolio" id="portfolio">
             <div class="contenedor">
                 <h2 class="titulo">Portafolio</h2>
                 <div class="galeria-port">
@@ -111,9 +111,9 @@
                     </div>
                 </div>
         </section>
-        <section class="clientes contenedor">
-            <h2>Que dicen nuestros clientes</h2>
-            <div class="cards">
+        <section class="clientes contenedor" id="clientes">
+            <h2 class="nuestrosClientes">Que dicen nuestros clientes</h2>
+            <div id="clientes" class="cards">
                 <div class="card">
                     <img src="img/face1.jpg" alt="">
                     <div class="contenido-texto-card">
@@ -161,7 +161,7 @@
         </section>
     </main>
     <footer>
-        <div class="contenedor-footer">
+        <div class="contenedor-footer" id="contacto">
             <div class="content-foo">
                 <h4>Phone</h4>
                 <p>151354684</p>
@@ -171,7 +171,7 @@
                 <p>151354684</p>
             </div>
             <div class="content-foo">
-                <h4>Location</h4>
+                <h4 id="dondeEstamos">Location</h4>
                 <p>151354684</p>
             </div>
         </div>

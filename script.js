@@ -1,10 +1,10 @@
 const SALUDO = "Hola Navegadores!"
-alert (SALUDO)
-let nombreNavegador = prompt ("¿Cuál es tu nombre?")
-alert ("Bienvenido/a" + nombreNavegador)
-let cantidadCompras = Number (prompt("Cuantas compras online haces por año?"))
+alert(SALUDO)
+let nombreNavegador = prompt("¿Cuál es tu nombre?")
+alert("Bienvenido/a" + nombreNavegador)
+let cantidadCompras = Number(prompt("Cuantas compras online haces por año?"))
 let cantidadCompras2032 = cantidadCompras * 10
-alert ("En 2032 vas a haber hecho aproximadamente" + cantidadCompras2032 + "compras")
+alert("En 2032 vas a haber hecho aproximadamente" + cantidadCompras2032 + "compras")
 
 //en lugar de alert se puede usar Console.log
 //parseInt usa el numero entero ParseFloat usa el numero en su totalidad
@@ -185,13 +185,13 @@ if (indice !== -1) {
     alert("Tenemos ese producto para ofrecerte")
 } else {
     alert("No contamos con ese producto")
-} 
+}
 
 /* do {
     nombreABuscar = prompt("Ingrese un producto")
 } while (nombreABuscar == ""); */
 
-console.log(array1) 
+console.log(array1)
 
 //FUNCIONES DE ORDEN SUPERIOR CLASE 7
 
@@ -271,15 +271,46 @@ array2.forEach(producto => console.log(producto)) // RECORRER UN ARRAY
 console.log(array2.find((producto) => producto.nombre == "fragancias" && producto.precio >= 2500)) //find lo que hace es decirme si encuentra un objeto o no
 console.log(array2.filter((producto) => producto.nombre == "velas" && producto.precio >= 2500)) //filter me retorna todos los objetos que cumplen la condicion y si no existe me devuelve un array vacio
 
-console.log(array2.map((producto) => producto.precio >= 2500)) 
- const array3 = [...array2]
-console.log(array2.sort(function(a, b) {
+console.log(array2.map((producto) => producto.precio >= 2500))
+const array3 = [...array2]
+console.log(array2.sort(function (a, b) {
     return a.nombre.localeCompare(b.nombre);
 })) //el metodo sort es una forma de ordenar un array segun un criterio
 
-console.log(array3.sort(function(a, b) {
-    return a.precio - b.precio;    
+console.log(array3.sort(function (a, b) {
+    return a.precio - b.precio;
 }))
 
 //CLASE 8 (DOM)
+
+let div = document.getElementById("clientes");
+console.log(div.innerHTML);
+
+console.log(document.getElementsByClassName("about-services"));
+
+
+let localizacion = document.getElementById("dondeEstamos")
+console.log(localizacion.innerHTML)
+
+localizacion.innerHTML = "Donde nos econtramos?"
+console.log(localizacion.innerHTML)
+
+let etiquetaH2 = document.getElementsByTagName("h2")
+
+for (let h2 of etiquetaH2) {
+    console.log(h2)
+}
+
+
+//CLASE 9 EVENTOS
+
+let boton1 = document.getElementById("boton1")
+
+boton1.addEventListener(`click`, () => {
+    alert("Me diste click")
+})
+
+boton1.onclick = () => console.log("Me diste click por onclick")
+
+
 

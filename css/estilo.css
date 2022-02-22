@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
 }
@@ -180,6 +184,8 @@ header .textos-header{
 .cards{
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+
 }
 
 .cards .card{
@@ -191,6 +197,7 @@ header .textos-header{
     justify-content: space-evenly;
     border-radius: 5px;
     box-shadow: 0 0 6px 0 rgba(0, 0, 0, .6);
+    margin-top: 10px;
 }
 
 .cards .card img{
@@ -212,6 +219,12 @@ header .textos-header{
     padding-top: 5px;
 }
 
+.nuestrosClientes{
+    color: #642a73;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 60px;
+}
 /* OUR TEAM */
 
 .about-services{
