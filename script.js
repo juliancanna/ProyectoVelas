@@ -302,15 +302,73 @@ for (let h2 of etiquetaH2) {
 }
 
 
+
+
 //CLASE 9 EVENTOS
 
-let boton1 = document.getElementById("boton1")
+/* let boton1 = document.getElementById("boton1")
 
 boton1.addEventListener(`click`, () => {
     alert("Me diste click")
 })
 
 boton1.onclick = () => console.log("Me diste click por onclick")
+ */
 
+let boton1 = document.getElementById("boton1")
+let inputColor = document.getElementById("inputColor")
+let boxHeader = document.getElementById("boxHeader")
+boton1.addEventListener(`click`, () => {
+    let input1 = document.getElementById("input1")
+    console.log(input1.value)
+})
+
+input1.addEventListener(`input`, () => {
+    console.log("Hola desde input") 
+} )
+
+/* inputColor.addEventListener(`input`, (e) => {
+    console.log(e.target.value)
+}) */
+
+boxHeader.addEventListener('mouseenter', () => {
+  boxHeader.classList.add('celesteRosa')
+})
+
+boxHeader.addEventListener('mouseleave', () => {
+    boxHeader.classList.remove('celesteRosa')
+    boxHeader.classList.add('rosa')
+  })
+
+ /*  boxHeader.addEventListener('mouseleave', () => {
+    boxHeader.classList.replace('celesteRosa', 'rosa')
+  }) */
+
+
+  // Json localstorage
+
+   const bdark = document.querySelector('#bdark');
+   const body = document.querySelector('body');
+  
+  load();
+
+   bdark.addEventListener('click', e =>{
+        body.classList.toggle('darkmode');
+        store(body.classList.contains('darkmode'));
+    });
+
+   function load(){
+        const darkmode = localStorage.getItem('darkmode');
+
+        if(!darkmode){
+            store('false');
+        }else if (darkmode == 'true'){
+            body.classList.add('darkmode');
+        }
+   };
+
+   function store(value){
+        localStorage.setItem('darkmode', value)
+   };
 
 

@@ -12,6 +12,7 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+
 .contenedor {
     padding: 60px 0;
     width: 90%;
@@ -38,6 +39,27 @@ header {
     /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, hsla(340, 95%, 50%, 0.63), hsla(317, 45%, 52%, 0.658)), url(../img/candlebanner.jpeg);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.rosa {
+    background: #bc4e9c;
+    /* fallback for old browsers */
+    background: linear-gradient(to right, hsla(340, 95%, 50%, 0.63), hsla(317, 45%, 52%, 0.658)), url(../img/candlebanner.jpeg);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(340, 95%, 50%, 0.63), hsla(317, 45%, 52%, 0.658)), url(../img/candlebanner.jpeg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.celesteRosa{
+    background: #12c2e9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-size: cover;
     background-attachment: fixed;
     position: relative;
@@ -228,7 +250,7 @@ header .textos-header{
 /* OUR TEAM */
 
 .about-services{
-    background: #fff;
+    /* background: #fff; */
     padding-bottom: 30px;
 }
 
@@ -295,3 +317,31 @@ footer{
     margin: 20px 0 0 0;
     color: #9e9797
 }
+
+.darkmode{
+    background-color: rgb(32,32,44);
+    color: white;
+}
+
+.botonModoOscuro {
+    letter-spacing: 2px;
+    background-color: #12c2e9;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    width: 100px;
+    height: 50px;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    box-shadow: inset 0 0 0 0 #f9e506;
+    transition: ease-out 0.3s;
+    font-size: 1rem;
+    outline: none;
+    cursor: pointer;
+}
+
+.botonModoOscuro:hover{
+    box-shadow: inset 100 0 0 0 #f9e506;
+    color: rgba(0, 0, 0, .6);
+} 
