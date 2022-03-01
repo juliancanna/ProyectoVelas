@@ -1,16 +1,16 @@
-const SALUDO = "Hola Navegadores!"
+/* const SALUDO = "Hola Navegadores!"
 alert(SALUDO)
 let nombreNavegador = prompt("¿Cuál es tu nombre?")
 alert("Bienvenido/a" + nombreNavegador)
 let cantidadCompras = Number(prompt("Cuantas compras online haces por año?"))
 let cantidadCompras2032 = cantidadCompras * 10
 alert("En 2032 vas a haber hecho aproximadamente" + cantidadCompras2032 + "compras")
-
+ */
 //en lugar de alert se puede usar Console.log
 //parseInt usa el numero entero ParseFloat usa el numero en su totalidad
 
 
-for (let i = 0; i < 6; i++) {
+/* for (let i = 0; i < 6; i++) {
     console.log(i)
 }
 
@@ -22,14 +22,14 @@ for (let i = 0; i < 10; i++) { // 0 1 2 3 4 5 6 7 8 9
 }
 
 console.log(`El promedio de las notas es ${acumulador / 10}`)
-
+ */
 /* let cantidadVelas =parseInt (prompt("Cuantas velas desea comprar?"))
 console.log (cantidadVelas)
 
 let precioVela = 50 
 console.log (cantidadVelas * precioVela) */
 
-let cantidadVelas
+/* let cantidadVelas
 let valor = 300
 do {
     cantidadVelas = prompt("Cuantas velas desea comprar?");
@@ -52,7 +52,7 @@ const division = (num1, num2) => num1 / num2
 console.log(division(num1, num2))
 
 alert(`El valor de cada cuota es de ${num1 / num2}`)
-
+ */
 /* const persona1 = {
     dni: "11.111.111",
     nombre: "Julian",
@@ -175,24 +175,24 @@ for(let i= 0; i < arrayPersonas.length; i++){
 } */
 
 
-let array1 = ["velas", "fragancias", "sahumerios", "recipientes"]
+/* let array1 = ["velas", "fragancias", "sahumerios", "recipientes"]
 let nombreABuscar = prompt("Ingrese un producto")
 let indice = array1.indexOf(nombreABuscar)
-
+ */
 /* console.log(indice) */
 
-if (indice !== -1) {
+/* if (indice !== -1) {
     alert("Tenemos ese producto para ofrecerte")
 } else {
     alert("No contamos con ese producto")
 }
-
+ */
 /* do {
     nombreABuscar = prompt("Ingrese un producto")
 } while (nombreABuscar == ""); */
 
-console.log(array1)
-
+/* console.log(array1)
+ */
 //FUNCIONES DE ORDEN SUPERIOR CLASE 7
 
 /* const persona1 = {
@@ -371,4 +371,19 @@ boxHeader.addEventListener('mouseleave', () => {
         localStorage.setItem('darkmode', value)
    };
 
+
+   //WORKSHOP 1
+
+   //FORMULARIO
+   var inputs = document.getElementsByClassName('formulario_input');
+
+   for(var i = 0; i < inputs.length; i++) {
+       inputs[i].addEventListener('keyup', function(){
+           if(this.value.length>=1) {
+               this.nextElementSibling.classList.add('fijar');
+           } else {
+            this.nextElementSibling.classList.remove('fijar');
+           }
+       });
+   }
 
