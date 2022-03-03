@@ -163,18 +163,20 @@
             </div>
         </section>
         <section>
-           <form action="" class="formulario">
+           <form action="" class="formulario" id="idForm">
                <h1 class="formulario_titulo">Contactanos</h1>
-               <input type="text" class="formulario_input">
+               <input type="text" class="formulario_input" id="idUser" name="user">
                <label for="" class="formulario_label">Nombres</label>
-               <input type="text" class="formulario_input">
+               <input type="text" class="formulario_input" id="idEmail" name="email">
                <label for="" class="formulario_label">Correo</label>
                <input type="text" class="formulario_input">
                <label for="" class="formulario_label">Teléfono</label>
-               <input type="text" class="formulario_input">
+               <input type="text" class="formulario_input" id="idMensaje" name="mensaje">
                <label for="" class="formulario_label">Mensaje</label>
-            <input type="submit" class="formulario_submit">
-            </form> 
+            <input type="submit" class="formulario_submit btn btn-primary" id="botonMostrarUsers">
+            </form> <br><br>
+            <button id="botonMostrarUsers" class="btn btn-secondary"></button><br>
+            <div id="divUsuarios"></div>
         </section>
     </main>
     <footer>

@@ -324,66 +324,174 @@ boton1.addEventListener(`click`, () => {
 })
 
 input1.addEventListener(`input`, () => {
-    console.log("Hola desde input") 
-} )
+    console.log("Hola desde input")
+})
 
 /* inputColor.addEventListener(`input`, (e) => {
     console.log(e.target.value)
 }) */
 
 boxHeader.addEventListener('mouseenter', () => {
-  boxHeader.classList.add('celesteRosa')
+    boxHeader.classList.add('celesteRosa')
 })
 
 boxHeader.addEventListener('mouseleave', () => {
     boxHeader.classList.remove('celesteRosa')
     boxHeader.classList.add('rosa')
-  })
+})
 
- /*  boxHeader.addEventListener('mouseleave', () => {
-    boxHeader.classList.replace('celesteRosa', 'rosa')
-  }) */
-
-
-  // Json localstorage
-
-   const bdark = document.querySelector('#bdark');
-   const body = document.querySelector('body');
-  
-  load();
-
-   bdark.addEventListener('click', e =>{
-        body.classList.toggle('darkmode');
-        store(body.classList.contains('darkmode'));
-    });
-
-   function load(){
-        const darkmode = localStorage.getItem('darkmode');
-
-        if(!darkmode){
-            store('false');
-        }else if (darkmode == 'true'){
-            body.classList.add('darkmode');
-        }
-   };
-
-   function store(value){
-        localStorage.setItem('darkmode', value)
-   };
+/*  boxHeader.addEventListener('mouseleave', () => {
+   boxHeader.classList.replace('celesteRosa', 'rosa')
+ }) */
 
 
-   //WORKSHOP 1
+// Json localstorage
 
-   //FORMULARIO
-   var inputs = document.getElementsByClassName('formulario_input');
+const bdark = document.querySelector('#bdark');
+const body = document.querySelector('body');
 
-   for(var i = 0; i < inputs.length; i++) {
-       inputs[i].addEventListener('keyup', function(){
-           if(this.value.length>=1) {
-               this.nextElementSibling.classList.add('fijar');
-           } else {
+load();
+
+bdark.addEventListener('click', e => {
+    body.classList.toggle('darkmode');
+    store(body.classList.contains('darkmode'));
+});
+
+function load() {
+    const darkmode = localStorage.getItem('darkmode');
+
+    if (!darkmode) {
+        store('false');
+    } else if (darkmode == 'true') {
+        body.classList.add('darkmode');
+    }
+};
+
+function store(value) {
+    localStorage.setItem('darkmode', value)
+};
+
+
+//WORKSHOP 1
+
+//FORMULARIO
+var inputs = document.getElementsByClassName('formulario_input');
+
+for (var i = 0; i < inputs.length; i++) {
+    inputs[i].addEventListener('keyup', function () {
+        if (this.value.length >= 1) {
+            this.nextElementSibling.classList.add('fijar');
+        } else {
             this.nextElementSibling.classList.remove('fijar');
-           }
-       });
-   }
+        }
+    });
+}
 
+//
+
+
+class User {
+    constructor(user, email, mensaje) {
+        this.user = user;
+        this.email = email;
+        this.mensaje = mensaje;
+    }
+
+    loguearse() {
+        console.log('${this.user} esta logueado correctamente')
+    }
+}
+
+let arrayUsuarios = []
+
+if (localStorage.getItem('usuarios')) {
+    arrayUsuarios = JSON.parse(localStorage.getItem('usuarios'))
+} else {
+    localStorage.setItem('usuarios', JSON.stringify(arrayUsuarios))
+}
+
+let formulario = document.getElementById('idForm')
+let botonMostratUsuarios = document.getElementById('botonMostrarUsers')
+let divUsers = document.getElementById('divUsuarios')
+
+function funcion() {
+
+}
+formulario.addEventListener('submit', (e) => {
+    e.preventDefault()
+
+    let user = document.getElementById('idUser').value
+    let email = document.getElementById('idEmail').value
+    let mensaje = document.getElementById('idMensaje').value
+
+    console.log(user)
+    console.log(email)
+    console.log(mensaje)
+
+    /* let datForm = new FormData(e.target)
+
+    console.log(datForm.get('user'))
+    console.log(datForm.get('email'))
+    console.log(datForm.get('mensaje')) */
+    if(!arrayUsuarios.some(usuarioEnArray => usuarioEnArray.email == email)) {
+        const usuario = new User(user, email, mensaje)
+        arrayUsuarios.push(usuario)
+        localStorage.setItem('usuarios', JSON.stringify(arrayUsuarios))
+        formulario.reset()
+    }
+    
+})
+
+/* botonMostratUsuarios.addEventListener('click', () => {
+    arrayUsuarios.forEach(usuarioEnArray, indice) => {
+        divUsers.innerHTML += '
+        
+        '
+    }
+}) */
+
+
+//CLASE 12 OPERACIONES AVANZADAS
+
+let edad = 18 
+
+/* if(edad >= 18) {
+    alert("Puede entrar")
+} else {
+    alert("No puede entrar")
+}
+ */
+
+edad >= 18 ? alert("Puede entrar") : alert("No puede entrar")
+
+if(null || undefined) {
+    console.log("V")
+} else {
+    console.log("F")
+} 
+
+/* const persona1 = undefined
+
+console.log(persona1?.name || "Propiedad no encontrada")*/
+
+class Persona {
+    constructor(nombre, apellido, edad, licencia) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.edad = edad;
+        this.licencia = licencia;
+    }
+}
+
+const persona1 = new Persona ("Julian", "Graells", 23, {tipo: "B2", fechaVencimiento: 20/4/2025})
+
+let { licencia : licenciaDeConducir} = persona1
+console.log(licenciaDeConducir)
+
+/* const persona = {nombre: "Julian", apellido: "Graells", edad: 23}
+let {nombre, apellido, edad} = persona
+
+console.log(nombre)
+console.log(apellido)
+console.log(edad)
+ */
