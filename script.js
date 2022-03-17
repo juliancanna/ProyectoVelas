@@ -315,7 +315,7 @@ boton1.addEventListener(`click`, () => {
 boton1.onclick = () => console.log("Me diste click por onclick")
  */
 
-let boton1 = document.getElementById("boton1")
+/* let boton1 = document.getElementById("boton1")
 let inputColor = document.getElementById("inputColor")
 let boxHeader = document.getElementById("boxHeader")
 boton1.addEventListener(`click`, () => {
@@ -325,7 +325,7 @@ boton1.addEventListener(`click`, () => {
 
 input1.addEventListener(`input`, () => {
     console.log("Hola desde input")
-})
+}) */
 
 /* inputColor.addEventListener(`input`, (e) => {
     console.log(e.target.value)
@@ -347,7 +347,7 @@ boxHeader.addEventListener('mouseleave', () => {
 
 // Json localstorage
 
-const bdark = document.querySelector('#bdark');
+/* const bdark = document.querySelector('#bdark');
 const body = document.querySelector('body');
 
 load();
@@ -370,7 +370,7 @@ function load() {
 function store(value) {
     localStorage.setItem('darkmode', value)
 };
-
+ */
 
 //WORKSHOP 1
 
@@ -495,4 +495,30 @@ console.log(nombre)
 console.log(apellido)
 console.log(edad)
  */
+
+
+let divDolar = document.getElementById('divDolar')
+
+
+fetch("https://criptoya.com/api/dolar")
+.then(objPromesas => objPromesas.json ())
+.then(data => {
+    let {blue, oficial, ccl, mep, ccb, solidario} = data
+    divDolar.innerHTML = `
+    <p> Oficial: $${oficial} </p>
+    <p> Solidario: $${solidario} </p>
+    <p> MEP: $${mep} </p>
+    <p> CCL: $${ccl} </p>
+    <p> CCB: $${ccb} </p>
+    <p> Blue: $${blue} </p>
+    `
+    console.log(data)
+});
+
+
+
+
+
+
+
 
