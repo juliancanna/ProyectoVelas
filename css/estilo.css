@@ -466,3 +466,12 @@ footer{
         min-height: 96px;
       }
       
+      .cardDolar{
+          text-align: center;
+          background-color: #c471ed;
+          justify-content: space-evenly;
+          border-bottom: 1px solid #000;
+          border-top: 1px solid #c471ed;
+          text-decoration: underline;
+          font-weight: bold;
+      }
