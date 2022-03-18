@@ -462,13 +462,13 @@ let edad = 18
 }
  */
 
-edad >= 18 ? alert("Puede entrar") : alert("No puede entrar")
+/* edad >= 18 ? alert("Puede entrar") : alert("No puede entrar")
 
 if(null || undefined) {
     console.log("V")
 } else {
     console.log("F")
-} 
+}  */
 
 /* const persona1 = undefined
 
