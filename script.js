@@ -23,7 +23,7 @@ const producto4 = {
 
 const array2 = [producto1, producto2, producto3, producto4]
 
-array2.forEach(producto => console.log(producto)) // RECORRER UN ARRAY
+/* array2.forEach(producto => console.log(producto)) // RECORRER UN ARRAY
 
 console.log(array2.find((producto) => producto.nombre == "fragancias" && producto.precio >= 2500)) //find lo que hace es decirme si encuentra un objeto o no
 console.log(array2.filter((producto) => producto.nombre == "velas" && producto.precio >= 2500)) //filter me retorna todos los objetos que cumplen la condicion y si no existe me devuelve un array vacio
@@ -37,56 +37,8 @@ console.log(array2.sort(function (a, b) {
 console.log(array3.sort(function (a, b) {
     return a.precio - b.precio;
 }))
-
-//CLASE 8 (DOM)
-
-let div = document.getElementById("clientes");
-console.log(div.innerHTML);
-
-console.log(document.getElementsByClassName("about-services"));
-
-
-let localizacion = document.getElementById("dondeEstamos")
-console.log(localizacion.innerHTML)
-
-localizacion.innerHTML = "Donde nos econtramos?"
-console.log(localizacion.innerHTML)
-
-let etiquetaH2 = document.getElementsByTagName("h2")
-
-for (let h2 of etiquetaH2) {
-    console.log(h2)
-}
-
-
-
-
-//CLASE 9 EVENTOS
-
-/* let boton1 = document.getElementById("boton1")
-
-boton1.addEventListener(`click`, () => {
-    alert("Me diste click")
-})
-
-boton1.onclick = () => console.log("Me diste click por onclick")
  */
-
-/* let boton1 = document.getElementById("boton1")
-let inputColor = document.getElementById("inputColor")
-let boxHeader = document.getElementById("boxHeader")
-boton1.addEventListener(`click`, () => {
-    let input1 = document.getElementById("input1")
-    console.log(input1.value)
-})
-
-input1.addEventListener(`input`, () => {
-    console.log("Hola desde input")
-}) */
-
-/* inputColor.addEventListener(`input`, (e) => {
-    console.log(e.target.value)
-}) */
+//CLASE 8 (DOM)
 
 boxHeader.addEventListener('mouseenter', () => {
     boxHeader.classList.add('celesteRosa')
@@ -97,37 +49,7 @@ boxHeader.addEventListener('mouseleave', () => {
     boxHeader.classList.add('rosa')
 })
 
-/*  boxHeader.addEventListener('mouseleave', () => {
-   boxHeader.classList.replace('celesteRosa', 'rosa')
- }) */
 
-
-// Json localstorage
-
-/* const bdark = document.querySelector('#bdark');
-const body = document.querySelector('body');
-
-load();
-
-bdark.addEventListener('click', e => {
-    body.classList.toggle('darkmode');
-    store(body.classList.contains('darkmode'));
-});
-
-function load() {
-    const darkmode = localStorage.getItem('darkmode');
-
-    if (!darkmode) {
-        store('false');
-    } else if (darkmode == 'true') {
-        body.classList.add('darkmode');
-    }
-};
-
-function store(value) {
-    localStorage.setItem('darkmode', value)
-};
- */
 
 //WORKSHOP 1
 
@@ -154,9 +76,7 @@ class User {
         this.mensaje = mensaje;
     }
 
-    loguearse() {
-        console.log('${this.user} esta logueado correctamente')
-    }
+    
 }
 
 let arrayUsuarios = []
@@ -181,9 +101,7 @@ formulario.addEventListener('submit', (e) => {
     let email = document.getElementById('idEmail').value
     let mensaje = document.getElementById('idMensaje').value
 
-    console.log(user)
-    console.log(email)
-    console.log(mensaje)
+   
 
     /* let datForm = new FormData(e.target)
 
@@ -212,24 +130,7 @@ formulario.addEventListener('submit', (e) => {
 
 let edad = 18 
 
-/* if(edad >= 18) {
-    alert("Puede entrar")
-} else {
-    alert("No puede entrar")
-}
- */
 
-/* edad >= 18 ? alert("Puede entrar") : alert("No puede entrar")
-
-if(null || undefined) {
-    console.log("V")
-} else {
-    console.log("F")
-}  */
-
-/* const persona1 = undefined
-
-console.log(persona1?.name || "Propiedad no encontrada")*/
 
 class Persona {
     constructor(nombre, apellido, edad, licencia) {
@@ -243,7 +144,7 @@ class Persona {
 const persona1 = new Persona ("Julian", "Graells", 23, {tipo: "B2", fechaVencimiento: 20/4/2025})
 
 let { licencia : licenciaDeConducir} = persona1
-console.log(licenciaDeConducir)
+
 
 /* const persona = {nombre: "Julian", apellido: "Graells", edad: 23}
 let {nombre, apellido, edad} = persona
